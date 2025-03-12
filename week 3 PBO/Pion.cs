@@ -40,6 +40,7 @@ namespace week_3_PBO
         {
             Console.WriteLine($"Pion berwarna : {warna}");
             Console.WriteLine($"Posisi Petak  : {posisiPetak}");
+            Console.WriteLine("");
         }
     }
     class PionHitam : Pion
@@ -66,6 +67,7 @@ namespace week_3_PBO
         {
             Console.WriteLine($"Pion berwarna : {warna}");
             Console.WriteLine($"Posisi Petak  : {posisiPetak}");
+            Console.WriteLine("");
         }
 
     }
