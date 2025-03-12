@@ -10,9 +10,9 @@ namespace week_3_PBO
     internal class RekeningBank
     {
         public string namaNasabah, namaBank;
-        public int nomorRekening;
+        public long nomorRekening;
         public ulong saldoRekening;
-        public RekeningBank(string namaNasabah,string namaBank, int nomorRekening, ulong saldoRekening)
+        public RekeningBank(string namaNasabah,string namaBank, long nomorRekening, ulong saldoRekening)
         {
             this.namaNasabah = namaNasabah;
             this.namaBank = namaBank;
@@ -24,7 +24,7 @@ namespace week_3_PBO
     {
         public int pinAtm;
         public int nomorKartu;
-        public ATM(string namaNasabah,string namaBank, int nomorRekening, ulong saldoRekening, int pinAtm, int nomorKartu) :
+        public ATM(string namaNasabah,string namaBank, long nomorRekening, ulong saldoRekening, int pinAtm, int nomorKartu) :
             base(namaNasabah ,namaBank, nomorRekening, saldoRekening)
         {
             this.namaNasabah = namaNasabah;
@@ -42,20 +42,23 @@ namespace week_3_PBO
             Console.WriteLine($"Saldo Rekening : {saldoRekening}");
             Console.WriteLine($"Pin            : {pinAtm}");
             Console.WriteLine($"Nomor Kartu    : {nomorKartu}");
+            Console.WriteLine("");
         }
         public void tarikTunai (int jumlahDitarik)
         {
             Console.WriteLine($"Saldo Berhasil Ditarik Sebesar : {jumlahDitarik}");
+            Console.WriteLine("");
         }
         public void setorTunai(int jumlahSetor)
         {
             Console.WriteLine($"Saldo Berhasil Disetor Sebanyak : {jumlahSetor}");
+            Console.WriteLine("");
         }
     }
     class MobileBanking : RekeningBank
     {
         public string username, password;
-        public MobileBanking(string namaNasabah, string namaBank, int nomorRekening, ulong saldoRekening, string username, string password) :
+        public MobileBanking(string namaNasabah, string namaBank, long nomorRekening, ulong saldoRekening, string username, string password) :
             base(namaNasabah, namaBank, nomorRekening, saldoRekening)
         {
             this.namaNasabah = namaNasabah;
@@ -73,10 +76,12 @@ namespace week_3_PBO
             Console.WriteLine($"Saldo Rekening : {saldoRekening}");
             Console.WriteLine($"Username       : {username}");
             Console.WriteLine($"Password       : {password}");
+            Console.WriteLine("");
         }
-        public void transfer(int rekening, int jumlah)
+        public void transfer(long rekening, int jumlah)
         {
             Console.WriteLine($"Saldo sebanyak {jumlah} berhasil di transfer ke {rekening}");
+            Console.WriteLine("");
         }
     } 
 }

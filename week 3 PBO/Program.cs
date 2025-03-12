@@ -32,6 +32,15 @@ internal class Program
         raja.InfoRaja();
 
         Console.WriteLine("Rekening Bank");
+        ATM atm = new ATM("Tunggul", "BRI", 242410102058, 1000000, 101010, 2078567128);
+        atm.infoAtm();
+        atm.tarikTunai(100000);
+        atm.setorTunai(100000);
 
+        MobileBanking mb = new MobileBanking("Tunggul", "BRI", 242410102058, 1000000, "Proton", "Proton123");
+        mb.infoMobileBanking();
+        mb.transfer(242410108090, 100000);
+
+        Console.ReadLine();
     }
 }
