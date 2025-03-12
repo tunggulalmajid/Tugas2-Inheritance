@@ -9,8 +9,9 @@ namespace week_3_PBO
     internal class Catur
     {
         public string namaBidak;
+        public string warna;
         public int nilaiBidak;
-        public Catur(string namaBidak, int nilaiBidak)
+        public Catur(string namaBidak,string warna, int nilaiBidak)
         {
             this.namaBidak = namaBidak;
             this.nilaiBidak = nilaiBidak;
@@ -21,10 +22,11 @@ namespace week_3_PBO
         public string PosisiAwal;
         public string CaraMelangkah;
         public string PromosiPion;
-        public Pion(string namaBidak, int nilaiBidak,string PosisiAwal, string CaraMelangkah, string PromosiPion) :
-            base(namaBidak, nilaiBidak)
+        public Pion(string namaBidak, string warna, int nilaiBidak,string PosisiAwal, string CaraMelangkah, string PromosiPion) :
+            base(namaBidak, warna, nilaiBidak)
         {
             this.namaBidak=namaBidak;
+            this.warna=warna;
             this.nilaiBidak=nilaiBidak;
             this.PosisiAwal = PosisiAwal;
             this.CaraMelangkah = CaraMelangkah;
@@ -33,20 +35,23 @@ namespace week_3_PBO
         public void InfoPion()
         {
             Console.WriteLine($"Nama Bidak     : {namaBidak}");
+            Console.WriteLine($"Warna Bidak    : {warna}");
             Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
             Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
             Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
             Console.WriteLine($"Promosi Pion   : {PromosiPion}");
+            Console.WriteLine("");
         }
     }
     class Benteng : Catur
     {
         public string PosisiAwal;
         public string CaraMelangkah;
-        public Benteng(string namaBidak, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
-            base(namaBidak, nilaiBidak)
+        public Benteng(string namaBidak, string warna, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
+            base(namaBidak, warna, nilaiBidak)
         {
             this.namaBidak = namaBidak;
+            this.warna = warna;
             this.nilaiBidak = nilaiBidak;
             this.PosisiAwal = PosisiAwal;
             this.CaraMelangkah = CaraMelangkah;
@@ -55,19 +60,22 @@ namespace week_3_PBO
         public void InfoBenteng()
         {
             Console.WriteLine($"Nama Bidak     : {namaBidak}");
+            Console.WriteLine($"Warna Bidak    : {warna}");
             Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
             Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
             Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
+            Console.WriteLine("");
         }
     }
     class Kuda: Catur
     {
         public string PosisiAwal;
         public string CaraMelangkah;
-        public Kuda(string namaBidak, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
-            base(namaBidak, nilaiBidak)
+        public Kuda(string namaBidak, string warna, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
+            base(namaBidak, warna, nilaiBidak)
         {
             this.namaBidak = namaBidak;
+            this.warna=warna;
             this.nilaiBidak = nilaiBidak;
             this.PosisiAwal = PosisiAwal;
             this.CaraMelangkah = CaraMelangkah;
@@ -76,73 +84,92 @@ namespace week_3_PBO
         public void InfoKuda()
         {
             Console.WriteLine($"Nama Bidak     : {namaBidak}");
+            Console.WriteLine($"Warna Bidak    : {warna}");
             Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
             Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
             Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
+            Console.WriteLine("");
         }
     }
     class Gajah : Catur
     {
         public string PosisiAwal;
+        public string PetakGajah;
         public string CaraMelangkah;
-        public Gajah(string namaBidak, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
-            base(namaBidak, nilaiBidak)
+        public Gajah(string namaBidak, string warna, int nilaiBidak, string PosisiAwal,string PetakGajah, string CaraMelangkah) :
+            base(namaBidak, warna, nilaiBidak)
         {
             this.namaBidak = namaBidak;
+            this.warna = warna;
             this.nilaiBidak = nilaiBidak;
             this.PosisiAwal = PosisiAwal;
+            this.PetakGajah = PetakGajah;
             this.CaraMelangkah = CaraMelangkah;
 
         }
         public void InfoGajah()
         {
             Console.WriteLine($"Nama Bidak     : {namaBidak}");
+            Console.WriteLine($"Warna Bidak    : {warna}");
+            Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
+            Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
+            Console.WriteLine($"Petak Gajah    : {PetakGajah}");
+            Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
+            Console.WriteLine("");
+        }
+    }
+    class Menteri : Catur
+    {
+        public string PosisiAwal;
+        public string CaraMelangkah;
+        public Menteri(string namaBidak, string warna, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
+            base(namaBidak, warna, nilaiBidak)
+        {
+            this.namaBidak = namaBidak;
+            this.warna=warna;
+            this.nilaiBidak = nilaiBidak;
+            this.PosisiAwal = PosisiAwal;
+            this.CaraMelangkah = CaraMelangkah;
+
+        }
+        public void InfoMentri()
+        {
+            Console.WriteLine($"Nama Bidak     : {namaBidak}");
+            Console.WriteLine($"Warna Bidak    : {warna}");
             Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
             Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
             Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
-        }
-        class Menteri : Catur
-        {
-            public string PosisiAwal;
-            public string CaraMelangkah;
-            public Menteri(string namaBidak, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
-                base(namaBidak, nilaiBidak)
-            {
-                this.namaBidak = namaBidak;
-                this.nilaiBidak = nilaiBidak;
-                this.PosisiAwal = PosisiAwal;
-                this.CaraMelangkah = CaraMelangkah;
-
-            }
-            public void InfoMentri()
-            {
-                Console.WriteLine($"Nama Bidak     : {namaBidak}");
-                Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
-                Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
-                Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
-            }
-        }
-        class Raja : Catur
-        {
-            public string PosisiAwal;
-            public string CaraMelangkah;
-            public Raja(string namaBidak, int nilaiBidak, string PosisiAwal, string CaraMelangkah) :
-                base(namaBidak, nilaiBidak)
-            {
-                this.namaBidak = namaBidak;
-                this.nilaiBidak = nilaiBidak;
-                this.PosisiAwal = PosisiAwal;
-                this.CaraMelangkah = CaraMelangkah;
-
-            }
-            public void InfoRaja()
-            {
-                Console.WriteLine($"Nama Bidak     : {namaBidak}");
-                Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
-                Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
-                Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
-            }
+            Console.WriteLine("");
         }
     }
+    class Raja : Catur
+    {
+        public string PosisiAwal;
+        public string CaraMelangkah;
+        public string peranRaja;
+        public Raja(string namaBidak, string warna, int nilaiBidak, string PosisiAwal, string CaraMelangkah, string peranRaja) :
+            base(namaBidak, warna, nilaiBidak)
+        {
+            this.namaBidak = namaBidak;
+            this.warna=warna;
+            this.nilaiBidak = nilaiBidak;
+            this.PosisiAwal = PosisiAwal;
+            this.CaraMelangkah = CaraMelangkah;
+            this.peranRaja = peranRaja;
 
+        }
+        public void InfoRaja()
+        {
+            Console.WriteLine($"Nama Bidak     : {namaBidak}");
+            Console.WriteLine($"Warna Bidak    : {warna}");
+            Console.WriteLine($"Nilai Bidak    : {nilaiBidak}");
+            Console.WriteLine($"Posisi Awal    : {PosisiAwal}");
+            Console.WriteLine($"Cara Melangkah : {CaraMelangkah}");
+            Console.WriteLine($"Peran Raja     : {peranRaja}");
+            Console.WriteLine("");
+
+        }
+    }
 }
+
+

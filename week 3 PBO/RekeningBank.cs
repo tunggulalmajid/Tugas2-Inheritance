@@ -9,8 +9,7 @@ namespace week_3_PBO
 {
     internal class RekeningBank
     {
-        public string namaNasabah;
-        public string namaBank;
+        public string namaNasabah, namaBank;
         public int nomorRekening;
         public ulong saldoRekening;
         public RekeningBank(string namaNasabah,string namaBank, int nomorRekening, ulong saldoRekening)
@@ -43,13 +42,19 @@ namespace week_3_PBO
             Console.WriteLine($"Saldo Rekening : {saldoRekening}");
             Console.WriteLine($"Pin            : {pinAtm}");
             Console.WriteLine($"Nomor Kartu    : {nomorKartu}");
-
+        }
+        public void tarikTunai (int jumlahDitarik)
+        {
+            Console.WriteLine($"Saldo Berhasil Ditarik Sebesar : {jumlahDitarik}");
+        }
+        public void setorTunai(int jumlahSetor)
+        {
+            Console.WriteLine($"Saldo Berhasil Disetor Sebanyak : {jumlahSetor}");
         }
     }
     class MobileBanking : RekeningBank
     {
-        public string username;
-        public string password;
+        public string username, password;
         public MobileBanking(string namaNasabah, string namaBank, int nomorRekening, ulong saldoRekening, string username, string password) :
             base(namaNasabah, namaBank, nomorRekening, saldoRekening)
         {
@@ -68,7 +73,10 @@ namespace week_3_PBO
             Console.WriteLine($"Saldo Rekening : {saldoRekening}");
             Console.WriteLine($"Username       : {username}");
             Console.WriteLine($"Password       : {password}");
-
+        }
+        public void transfer(int rekening, int jumlah)
+        {
+            Console.WriteLine($"Saldo sebanyak {jumlah} berhasil di transfer ke {rekening}");
         }
     } 
 }

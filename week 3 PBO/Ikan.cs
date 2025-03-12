@@ -8,10 +8,7 @@ namespace week_3_PBO
 {
     internal class ikan
     {
-        public string namaIkan;
-        public string namaIlmiah;
-        public string warnaIkan;
-        public string tempatHidup;
+        public string namaIkan, namaIlmiah, warnaIkan, tempatHidup;
         public ikan(string namaIkan, string namaIlmiah, string warnaIkan, string tempatHidup)
         {
             this.namaIkan = namaIkan;
@@ -22,10 +19,9 @@ namespace week_3_PBO
     }
     class IkanAirAsin : ikan
     {
-        public string asalIkan;
-        public string suhuTempatHidup;
-        public string makanan;
-        public IkanAirAsin(string namaIkan, string namaIlmiah, string warnaIkan,string tempatHidup, string asalIkan, string suhuTempatHidup, string makanan) 
+        public string asalIkan, makanan;
+        public int suhuTempatHidup;
+        public IkanAirAsin(string namaIkan, string namaIlmiah, string warnaIkan,string tempatHidup, string asalIkan, int suhuTempatHidup, string makanan) 
             : base(namaIkan, namaIlmiah, warnaIkan, tempatHidup)
         {
             this.namaIkan = namaIkan;
@@ -45,6 +41,7 @@ namespace week_3_PBO
             Console.WriteLine($"Asal Ikan             : {asalIkan}");
             Console.WriteLine($"SuhuTempat Hidup Ikan : {suhuTempatHidup}");
             Console.WriteLine($"Makanan Ikan          : {makanan}");
+            Console.WriteLine("");
         }
     }
 }

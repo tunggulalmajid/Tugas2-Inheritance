@@ -8,11 +8,9 @@ namespace week_3_PBO
 {
     internal class Mobil
     {
-        public string namaMobil;
-        public string merkMobil;
-        public string warnaMobil;
-        public int jumlahKursi;
-        public int tahunKeluar;
+        public string namaMobil, merkMobil, warnaMobil;
+        public int jumlahKursi, tahunKeluar;
+        
         public Mobil(string namaMobil, string merkMobil, string warnaMobil, int jumlahKursi, int tahunKeluar)
         {
             this.namaMobil = namaMobil;
@@ -26,8 +24,8 @@ namespace week_3_PBO
     class MobilSedan : Mobil
     {
         public string typeSedan;
-        public double panjangSedan;
-        public double luasBagasiSedan;
+        public double panjangSedan, luasBagasiSedan;
+        
 
         public MobilSedan (string namaMobil, string merkMobil, string warnaMobil, int jumlahKursi, int tahunKeluar, string typeSedan, 
             double panjangSedan, double luasBagasisedan) : base(namaMobil,merkMobil,warnaMobil,jumlahKursi, tahunKeluar) 
@@ -51,6 +49,7 @@ namespace week_3_PBO
             Console.WriteLine($"Tipe Sedan    : {typeSedan} ");
             Console.WriteLine($"Panjang Sedan : {panjangSedan} ");
             Console.WriteLine($"Luas Bagasi   : {luasBagasiSedan} ");
+            Console.WriteLine("");
 
         }
     }
