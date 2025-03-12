@@ -44,12 +44,12 @@ namespace week_3_PBO
             Console.WriteLine($"Nomor Kartu    : {nomorKartu}");
             Console.WriteLine("");
         }
-        public void tarikTunai (int jumlahDitarik)
+        public void tarikTunai (ulong jumlahDitarik)
         {
             Console.WriteLine($"Saldo Berhasil Ditarik Sebesar : {jumlahDitarik}");
             Console.WriteLine("");
         }
-        public void setorTunai(int jumlahSetor)
+        public void setorTunai(ulong jumlahSetor)
         {
             Console.WriteLine($"Saldo Berhasil Disetor Sebanyak : {jumlahSetor}");
             Console.WriteLine("");

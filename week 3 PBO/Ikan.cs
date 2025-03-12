@@ -20,8 +20,8 @@ namespace week_3_PBO
     class IkanAirAsin : ikan
     {
         public string asalIkan, makanan;
-        public int suhuTempatHidup;
-        public IkanAirAsin(string namaIkan, string namaIlmiah, string warnaIkan,string tempatHidup, string asalIkan, int suhuTempatHidup, string makanan) 
+        public double suhuTempatHidup;
+        public IkanAirAsin(string namaIkan, string namaIlmiah, string warnaIkan,string tempatHidup, string asalIkan, double suhuTempatHidup, string makanan) 
             : base(namaIkan, namaIlmiah, warnaIkan, tempatHidup)
         {
             this.namaIkan = namaIkan;
